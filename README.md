@@ -22,7 +22,7 @@ A powerful, lightweight, multi-session, and enterprise-grade WhatsApp API server
 - [Unit Testing](#unit-testing)
 - [API Documentation](#api-documentation)
 - [Troubleshooting](#troubleshooting)
-- [License](#license)
+- [License & Attribution](#license--attribution)
 
 ---
 
@@ -209,6 +209,13 @@ npm run fix:sqlite
 
 ---
 
-## License
+## License & Attribution
 
-This project is licensed under the **MIT License**. Created by **Alucard0x1**.
+- **Original Creator**: Alucard0x1
+- **Original Repository**: [https://github.com/Alucard0x1/Super-Light-Web-WhatsApp-API-Server](https://github.com/Alucard0x1/Super-Light-Web-WhatsApp-API-Server)
+- **Telegram**: [https://t.me/Alucard0x1](https://t.me/Alucard0x1)
+- **License**: [MIT License](LICENSE)
+
+This project is open source and licensed under the **MIT License**.
+
+You are free to use, fork, modify, distribute, and use this project for commercial or private purposes under the terms of the MIT License. Any distribution, fork, or modified version that uses substantial portions of this source code must retain the original copyright notice (`Copyright (c) 2026 Alucard0x1`) and the MIT License text. Attribution to the original creator and repository link should be preserved in accordance with [ATTRIBUTION.md](ATTRIBUTION.md) and [NOTICE](NOTICE).

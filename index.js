@@ -1,3 +1,15 @@
+/*
+ * Super-Light-Web-WhatsApp-API-Server
+ *
+ * Original Creator: Alucard0x1
+ * Original Repository:
+ * https://github.com/Alucard0x1/Super-Light-Web-WhatsApp-API-Server
+ *
+ * Copyright (c) 2026 Alucard0x1
+ * Licensed under the MIT License.
+ * See LICENSE for details.
+ */
+
 /**
  * WhatsApp API Server - Main Entry Point
  * Version 3.2.0
