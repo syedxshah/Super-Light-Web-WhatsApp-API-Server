@@ -1,12 +1,12 @@
 module.exports = {
   apps: [{
-    name: 'wa',
+    name: 'whatsapp-api',
     script: './index.js',
     instances: 1,
     autorestart: true,
     watch: false,
     max_memory_restart: '1G',
-    node_args: '--max-old-space-size=1024 --optimize-for-size --gc-interval=100',
+    node_args: '--max-old-space-size=1024',
     env: {
       NODE_ENV: 'production',
       NODE_OPTIONS: '--max-old-space-size=1024'
@@ -24,4 +24,4 @@ module.exports = {
     instance_var: 'INSTANCE_ID',
     exec_mode: 'fork'
   }]
-}; 
+};
