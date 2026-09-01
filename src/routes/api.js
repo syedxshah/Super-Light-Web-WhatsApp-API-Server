@@ -345,20 +345,18 @@ function initializeApi(sessions, sessionTokens, createSession, getSessionsDetail
             return res.status(404).json({ status: 'error', message: 'Session not found' });
         }
 
-        // Check if already connected
-        if (sessions.has(sessionId) && sessions.get(sessionId)?.status === 'CONNECTED') {
-            return res.status(400).json({ status: 'error', message: 'Session is already connected' });
+        // Check if already connected or currently connecting
+        const existingSession = sessions.get(sessionId);
+        if (existingSession) {
+            if (existingSession.status === 'CONNECTED') {
+                return res.status(400).json({ status: 'error', message: 'Session is already connected' });
+            }
+            if (existingSession.status === 'CONNECTING' || existingSession.status === 'GENERATING_QR') {
+                return res.status(200).json({ status: 'success', message: 'QR code generation in progress' });
+            }
         }
 
         try {
-            // Disconnect if currently connecting/reconnecting
-            if (sessions.has(sessionId)) {
-                const existingSession = sessions.get(sessionId);
-                if (existingSession?.sock && typeof existingSession.sock.end === 'function') {
-                    existingSession.sock.end();
-                }
-            }
-
             // Reconnect to trigger QR generation
             await createSession(sessionId, currentUser.email);
 
