@@ -322,6 +322,7 @@ function initializeApi(sessions, sessionTokens, createSession, getSessionsDetail
 
     // QR Code endpoint - triggers reconnection to generate new QR
     router.get('/sessions/:sessionId/qr', async (req, res) => {
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
         log('API request', 'SYSTEM', { event: 'api-request', method: req.method, endpoint: req.originalUrl, params: req.params });
 
         // Get current user from session

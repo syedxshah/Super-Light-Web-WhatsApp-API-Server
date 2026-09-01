@@ -1289,7 +1289,7 @@
 
         async function getQrCode(sessionId) {
             try {
-                const response = await fetch(`/api/v1/sessions/${sessionId}/qr`, { credentials: 'same-origin' });
+                const response = await fetch(`/api/v1/sessions/${sessionId}/qr?_t=${Date.now()}`, { credentials: 'same-origin' });
                 const result = await response.json();
                 if (!response.ok) {
                     if (result.message && !result.message.includes('token')) {
