@@ -1291,7 +1291,20 @@
             try {
                 const response = await fetch(`/api/v1/sessions/${sessionId}/qr?_t=${Date.now()}`, { credentials: 'same-origin' });
                 const result = await response.json();
-                if (!response.ok) {
+                if (response.ok) {
+                    if (result.qr) {
+                        const qrContainer = document.getElementById(`qr-container-${sessionId}`);
+                        const qrCodeEl = document.getElementById(`qr-${sessionId}`);
+                        const getQrBtn = document.getElementById(`btn-qr-${sessionId}`);
+                        if (qrContainer && qrCodeEl) {
+                            qrContainer.style.display = 'block';
+                            if (getQrBtn) getQrBtn.style.display = 'none';
+                            qrCodeEl.innerHTML = '';
+                            new QRCode(qrCodeEl, { text: result.qr, width: 200, height: 200 });
+                        }
+                    }
+                    fetchSessions();
+                } else {
                     if (result.message && !result.message.includes('token')) {
                         alert('Failed to get QR code: ' + (result.message || result.error));
                     }
@@ -2134,6 +2147,7 @@
 
             initializeWebSocket();
             loadSessions();
+            setInterval(fetchSessions, 3000);
             fetch('/admin/logs')
                 .then(res => res.json())
                 .then(data => {

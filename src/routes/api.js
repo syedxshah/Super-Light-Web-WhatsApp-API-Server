@@ -347,12 +347,19 @@ function initializeApi(sessions, sessionTokens, createSession, getSessionsDetail
 
         // Check if already connected or currently connecting
         const existingSession = sessions.get(sessionId);
+        const whatsappService = require('../services/whatsapp');
+        const activeQr = whatsappService.getQr(sessionId);
+
         if (existingSession) {
             if (existingSession.status === 'CONNECTED') {
                 return res.status(400).json({ status: 'error', message: 'Session is already connected' });
             }
             if (existingSession.status === 'CONNECTING' || existingSession.status === 'GENERATING_QR') {
-                return res.status(200).json({ status: 'success', message: 'QR code generation in progress' });
+                return res.status(200).json({
+                    status: 'success',
+                    message: activeQr ? 'QR code available' : 'QR code generation in progress',
+                    qr: activeQr || null
+                });
             }
         }
 
