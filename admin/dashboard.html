@@ -8,7 +8,9 @@
     <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -20,7 +22,7 @@
             --brand-green: #10b981;
             --brand-green-hover: #059669;
             --brand-green-glow: rgba(16, 185, 129, 0.2);
-            
+
             /* Light mode tokens */
             --bg-app: #f8fafc;
             --bg-sidebar: #0f172a;
@@ -287,9 +289,20 @@
         }
 
         @keyframes pulse-ring {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
         }
 
         .content-area {
@@ -340,14 +353,16 @@
             box-shadow: 0 6px 16px var(--brand-green-glow);
         }
 
-        .form-control, .form-select {
+        .form-control,
+        .form-select {
             border-radius: 10px;
             padding: 0.6rem 0.9rem;
             border-color: var(--border-card);
             font-size: 0.9rem;
         }
 
-        .form-control:focus, .form-select:focus {
+        .form-control:focus,
+        .form-select:focus {
             border-color: #10b981;
             box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
         }
@@ -390,14 +405,52 @@
             background-color: rgba(255, 255, 255, 0.04);
         }
 
-        .log-time { color: #64748b; margin-right: 0.75rem; flex-shrink: 0; }
-        .log-context { color: #38bdf8; font-weight: 600; margin-right: 0.75rem; cursor: pointer; }
-        .log-context:hover { text-decoration: underline; }
-        .log-level { margin-right: 0.75rem; font-weight: bold; width: 50px; text-align: center; border-radius: 4px; font-size: 0.7rem; padding: 0.1rem 0; }
-        .lvl-info-badge { background: rgba(16, 185, 129, 0.2); color: #10b981; }
-        .lvl-warn-badge { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
-        .lvl-error-badge { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
-        .lvl-debug-badge { background: rgba(148, 163, 184, 0.2); color: #94a3b8; }
+        .log-time {
+            color: #64748b;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .log-context {
+            color: #38bdf8;
+            font-weight: 600;
+            margin-right: 0.75rem;
+            cursor: pointer;
+        }
+
+        .log-context:hover {
+            text-decoration: underline;
+        }
+
+        .log-level {
+            margin-right: 0.75rem;
+            font-weight: bold;
+            width: 50px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            padding: 0.1rem 0;
+        }
+
+        .lvl-info-badge {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .lvl-warn-badge {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+
+        .lvl-error-badge {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        .lvl-debug-badge {
+            background: rgba(148, 163, 184, 0.2);
+            color: #94a3b8;
+        }
 
         .terminal-search {
             flex-grow: 1;
@@ -423,19 +476,26 @@
             .app-sidebar {
                 transform: translateX(-100%);
             }
+
             .app-sidebar.show {
                 transform: translateX(0);
             }
+
             .app-main {
                 margin-left: 0;
             }
+
             .sidebar-overlay {
                 position: fixed;
-                top: 0; left: 0; right: 0; bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
                 background-color: rgba(0, 0, 0, 0.5);
                 z-index: 1030;
                 display: none;
             }
+
             .sidebar-overlay.show {
                 display: block;
             }
@@ -454,31 +514,38 @@
             background: #ffffff;
             margin: 0 auto;
         }
+
         /* Sidebar sub-menus */
         .nav-parent {
             cursor: pointer;
             user-select: none;
         }
+
         .nav-parent .nav-chevron {
             margin-left: auto;
             transition: transform 0.25s ease;
             font-size: 0.75rem;
         }
+
         .nav-parent.open .nav-chevron {
             transform: rotate(90deg);
         }
+
         .sub-menu {
             display: none;
             flex-direction: column;
         }
+
         .sub-menu.open {
             display: flex;
         }
+
         .sub-menu .sidebar-link {
             padding-left: 2.2rem;
             font-size: 0.85rem;
             border-left: 2px solid transparent;
         }
+
         .sub-menu .sidebar-link.active {
             border-left-color: var(--primary, #10b981);
         }
@@ -516,7 +583,8 @@
                     <span>Dashboard</span>
                 </a>
 
-                <a href="#" class="sidebar-link nav-parent" data-target="menu-messaging" onclick="toggleSubMenu('menu-messaging', this); return false;">
+                <a href="#" class="sidebar-link nav-parent" data-target="menu-messaging"
+                    onclick="toggleSubMenu('menu-messaging', this); return false;">
                     <i class="bi bi-chat-left-text-fill"></i>
                     <span>Messaging</span>
                     <i class="bi bi-chevron-right nav-chevron"></i>
@@ -540,7 +608,8 @@
                     </a>
                 </div>
 
-                <a href="#" class="sidebar-link nav-parent" data-target="menu-admin" onclick="toggleSubMenu('menu-admin', this); return false;">
+                <a href="#" class="sidebar-link nav-parent" data-target="menu-admin"
+                    onclick="toggleSubMenu('menu-admin', this); return false;">
                     <i class="bi bi-gear-fill"></i>
                     <span>Administration</span>
                     <i class="bi bi-chevron-right nav-chevron"></i>
@@ -561,7 +630,8 @@
                     <span>API Docs</span>
                 </a>
 
-                <a href="#" class="sidebar-link nav-parent" data-target="menu-jump" onclick="toggleSubMenu('menu-jump', this); return false;">
+                <a href="#" class="sidebar-link nav-parent" data-target="menu-jump"
+                    onclick="toggleSubMenu('menu-jump', this); return false;">
                     <i class="bi bi-list-ul"></i>
                     <span>On This Page</span>
                     <i class="bi bi-chevron-right nav-chevron"></i>
@@ -599,7 +669,8 @@
                     </div>
                 </div>
                 <div class="sidebar-footer-actions">
-                    <button class="btn btn-sm btn-outline-light w-50" id="theme-toggler" type="button" title="Toggle Theme">
+                    <button class="btn btn-sm btn-outline-light w-50" id="theme-toggler" type="button"
+                        title="Toggle Theme">
                         <i class="bi bi-sun-fill"></i> Mode
                     </button>
                     <button class="btn btn-sm btn-outline-danger w-50" id="logout-btn" type="button">
@@ -635,8 +706,10 @@
                         <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
                             <h5 class="mb-0"><i class="bi bi-device-hdd text-primary me-2"></i>Session Management</h5>
                             <div class="d-flex align-items-center gap-2">
-                                <input type="text" id="sessionIdInput" class="form-control" placeholder="Create New Session ID" style="max-width: 250px;">
-                                <button id="createSessionBtn" class="btn btn-primary"><i class="bi bi-plus-lg me-1"></i>Create</button>
+                                <input type="text" id="sessionIdInput" class="form-control"
+                                    placeholder="Create New Session ID" style="max-width: 250px;">
+                                <button id="createSessionBtn" class="btn btn-primary"><i
+                                        class="bi bi-plus-lg me-1"></i>Create</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -662,80 +735,110 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="api-recipient" class="form-label fw-bold">Recipient</label>
-                                        <input type="text" class="form-control" id="api-recipient" placeholder="Phone (e.g. 62812345678) or Group ID">
+                                        <input type="text" class="form-control" id="api-recipient"
+                                            placeholder="Phone (e.g. 62812345678) or Group ID">
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
                                     <ul class="nav nav-pills mb-3" id="api-tabs" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="text-tab" data-bs-toggle="tab" data-bs-target="#text-panel" type="button" role="tab"><i class="bi bi-chat-text-fill me-1"></i> Text</button>
+                                            <button class="nav-link active" id="text-tab" data-bs-toggle="tab"
+                                                data-bs-target="#text-panel" type="button" role="tab"><i
+                                                    class="bi bi-chat-text-fill me-1"></i> Text</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="image-tab" data-bs-toggle="tab" data-bs-target="#image-panel" type="button" role="tab"><i class="bi bi-image-fill me-1"></i> Image</button>
+                                            <button class="nav-link" id="image-tab" data-bs-toggle="tab"
+                                                data-bs-target="#image-panel" type="button" role="tab"><i
+                                                    class="bi bi-image-fill me-1"></i> Image</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="document-tab" data-bs-toggle="tab" data-bs-target="#document-panel" type="button" role="tab"><i class="bi bi-file-earmark-arrow-up-fill me-1"></i> Document</button>
+                                            <button class="nav-link" id="document-tab" data-bs-toggle="tab"
+                                                data-bs-target="#document-panel" type="button" role="tab"><i
+                                                    class="bi bi-file-earmark-arrow-up-fill me-1"></i> Document</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="combo-tab" data-bs-toggle="tab" data-bs-target="#combo-panel" type="button" role="tab"><i class="bi bi-collection-fill me-1"></i> Combo Payload</button>
+                                            <button class="nav-link" id="combo-tab" data-bs-toggle="tab"
+                                                data-bs-target="#combo-panel" type="button" role="tab"><i
+                                                    class="bi bi-collection-fill me-1"></i> Combo Payload</button>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="api-tab-content">
                                         <!-- Text Panel -->
                                         <div class="tab-pane fade show active" id="text-panel" role="tabpanel">
                                             <div class="mb-3">
-                                                <textarea class="form-control" id="text-message" rows="4" placeholder="Your text message here..."></textarea>
+                                                <textarea class="form-control" id="text-message" rows="4"
+                                                    placeholder="Your text message here..."></textarea>
                                             </div>
-                                            <button class="btn btn-primary" onclick="sendTextMessage(this)"><i class="bi bi-send-fill me-1"></i> Send Text</button>
+                                            <button class="btn btn-primary" onclick="sendTextMessage(this)"><i
+                                                    class="bi bi-send-fill me-1"></i> Send Text</button>
                                         </div>
 
                                         <!-- Image Panel -->
                                         <div class="tab-pane fade" id="image-panel" role="tabpanel">
-                                            <input type="text" class="form-control mb-2" id="image-caption" placeholder="Optional caption...">
-                                            <input type="text" class="form-control mb-2" id="image-url" placeholder="Image URL (e.g., https://...)">
+                                            <input type="text" class="form-control mb-2" id="image-caption"
+                                                placeholder="Optional caption...">
+                                            <input type="text" class="form-control mb-2" id="image-url"
+                                                placeholder="Image URL (e.g., https://...)">
                                             <div class="text-center text-muted my-1"><small>OR</small></div>
-                                            <input class="form-control mb-2" type="file" id="image-upload" accept="image/*">
+                                            <input class="form-control mb-2" type="file" id="image-upload"
+                                                accept="image/*">
                                             <div id="image-preview" class="mt-2" style="max-width: 200px;"></div>
-                                            <button class="btn btn-primary mt-3" onclick="sendImageMessage(this)"><i class="bi bi-send-fill me-1"></i> Send Image</button>
+                                            <button class="btn btn-primary mt-3" onclick="sendImageMessage(this)"><i
+                                                    class="bi bi-send-fill me-1"></i> Send Image</button>
                                         </div>
 
                                         <!-- Document Panel -->
                                         <div class="tab-pane fade" id="document-panel" role="tabpanel">
-                                            <input type="text" class="form-control mb-2" id="document-url" placeholder="Document URL (e.g., https://...)">
+                                            <input type="text" class="form-control mb-2" id="document-url"
+                                                placeholder="Document URL (e.g., https://...)">
                                             <div class="text-center text-muted my-1"><small>OR</small></div>
                                             <input class="form-control mb-2" type="file" id="document-upload">
-                                            <button class="btn btn-primary mt-3" onclick="sendDocumentMessage(this)"><i class="bi bi-send-fill me-1"></i> Send Document</button>
+                                            <button class="btn btn-primary mt-3" onclick="sendDocumentMessage(this)"><i
+                                                    class="bi bi-send-fill me-1"></i> Send Document</button>
                                         </div>
 
                                         <!-- Combo Panel -->
                                         <div class="tab-pane fade" id="combo-panel" role="tabpanel">
                                             <div class="alert alert-info mb-3">
-                                                <i class="bi bi-info-circle me-1"></i> Send multiple message types in a single API request payload.
+                                                <i class="bi bi-info-circle me-1"></i> Send multiple message types in a
+                                                single API request payload.
                                             </div>
 
                                             <div class="border rounded p-3 mb-3">
-                                                <h6 class="text-primary mb-2"><i class="bi bi-chat-text-fill me-1"></i> Text Message</h6>
-                                                <textarea class="form-control" id="combo-text-message" rows="3" placeholder="Your text message..."></textarea>
+                                                <h6 class="text-primary mb-2"><i class="bi bi-chat-text-fill me-1"></i>
+                                                    Text Message</h6>
+                                                <textarea class="form-control" id="combo-text-message" rows="3"
+                                                    placeholder="Your text message..."></textarea>
                                             </div>
 
                                             <div class="border rounded p-3 mb-3">
-                                                <h6 class="text-primary mb-2"><i class="bi bi-image-fill me-1"></i> Image</h6>
-                                                <input type="text" class="form-control mb-2" id="combo-image-caption" placeholder="Image caption (optional)...">
-                                                <input type="text" class="form-control mb-2" id="combo-image-url" placeholder="Image URL (e.g., https://...)">
+                                                <h6 class="text-primary mb-2"><i class="bi bi-image-fill me-1"></i>
+                                                    Image</h6>
+                                                <input type="text" class="form-control mb-2" id="combo-image-caption"
+                                                    placeholder="Image caption (optional)...">
+                                                <input type="text" class="form-control mb-2" id="combo-image-url"
+                                                    placeholder="Image URL (e.g., https://...)">
                                                 <div class="text-center text-muted my-1"><small>OR</small></div>
-                                                <input class="form-control mb-2" type="file" id="combo-image-upload" accept="image/*">
-                                                <div id="combo-image-preview" class="mt-2" style="max-width: 200px;"></div>
+                                                <input class="form-control mb-2" type="file" id="combo-image-upload"
+                                                    accept="image/*">
+                                                <div id="combo-image-preview" class="mt-2" style="max-width: 200px;">
+                                                </div>
                                             </div>
 
                                             <div class="border rounded p-3 mb-3">
-                                                <h6 class="text-primary mb-2"><i class="bi bi-file-earmark-arrow-up-fill me-1"></i> Document</h6>
-                                                <input type="text" class="form-control mb-2" id="combo-document-url" placeholder="Document URL (e.g., https://...)">
+                                                <h6 class="text-primary mb-2"><i
+                                                        class="bi bi-file-earmark-arrow-up-fill me-1"></i> Document</h6>
+                                                <input type="text" class="form-control mb-2" id="combo-document-url"
+                                                    placeholder="Document URL (e.g., https://...)">
                                                 <div class="text-center text-muted my-1"><small>OR</small></div>
                                                 <input class="form-control mb-2" type="file" id="combo-document-upload">
-                                                <input type="text" class="form-control mb-2" id="combo-document-filename" placeholder="Filename (optional, e.g., report.pdf)">
+                                                <input type="text" class="form-control mb-2"
+                                                    id="combo-document-filename"
+                                                    placeholder="Filename (optional, e.g., report.pdf)">
                                             </div>
 
-                                            <button class="btn btn-primary btn-lg w-100" onclick="sendComboMessage(this)">
+                                            <button class="btn btn-primary btn-lg w-100"
+                                                onclick="sendComboMessage(this)">
                                                 <i class="bi bi-send-fill me-1"></i> Send All Messages
                                             </button>
                                         </div>
@@ -754,30 +857,39 @@
                 <section id="api-reference" class="mb-5">
                     <div class="card shadow-sm">
                         <div class="card-header">
-                            <h5 class="mb-0"><i class="bi bi-code-slash text-primary me-2"></i>API Reference & Example cURL Commands</h5>
+                            <h5 class="mb-0"><i class="bi bi-code-slash text-primary me-2"></i>API Reference & Example
+                                cURL Commands</h5>
                         </div>
                         <div class="card-body">
                             <ul class="nav nav-tabs mb-3" id="curlExampleTabs" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="curl-sessions-tab" data-bs-toggle="tab" data-bs-target="#curl-sessions" type="button" role="tab">Sessions</button>
+                                    <button class="nav-link active" id="curl-sessions-tab" data-bs-toggle="tab"
+                                        data-bs-target="#curl-sessions" type="button" role="tab">Sessions</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="curl-text-tab" data-bs-toggle="tab" data-bs-target="#curl-text" type="button" role="tab">Text</button>
+                                    <button class="nav-link" id="curl-text-tab" data-bs-toggle="tab"
+                                        data-bs-target="#curl-text" type="button" role="tab">Text</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="curl-text-image-tab" data-bs-toggle="tab" data-bs-target="#curl-text-image" type="button" role="tab">Text + Image</button>
+                                    <button class="nav-link" id="curl-text-image-tab" data-bs-toggle="tab"
+                                        data-bs-target="#curl-text-image" type="button" role="tab">Text + Image</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="curl-text-image-doc-tab" data-bs-toggle="tab" data-bs-target="#curl-text-image-doc" type="button" role="tab">Text + Image + Doc</button>
+                                    <button class="nav-link" id="curl-text-image-doc-tab" data-bs-toggle="tab"
+                                        data-bs-target="#curl-text-image-doc" type="button" role="tab">Text + Image +
+                                        Doc</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="curl-text-doc-tab" data-bs-toggle="tab" data-bs-target="#curl-text-doc" type="button" role="tab">Text + Doc</button>
+                                    <button class="nav-link" id="curl-text-doc-tab" data-bs-toggle="tab"
+                                        data-bs-target="#curl-text-doc" type="button" role="tab">Text + Doc</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="curl-formatting-tab" data-bs-toggle="tab" data-bs-target="#curl-formatting" type="button" role="tab">Formatting</button>
+                                    <button class="nav-link" id="curl-formatting-tab" data-bs-toggle="tab"
+                                        data-bs-target="#curl-formatting" type="button" role="tab">Formatting</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="curl-webhook-tab" data-bs-toggle="tab" data-bs-target="#curl-webhook" type="button" role="tab">Webhook</button>
+                                    <button class="nav-link" id="curl-webhook-tab" data-bs-toggle="tab"
+                                        data-bs-target="#curl-webhook" type="button" role="tab">Webhook</button>
                                 </li>
                             </ul>
                             <div class="tab-content" id="curlExampleTabsContent">
@@ -788,18 +900,21 @@
 -H "X-Master-Key: YOUR_MASTER_API_KEY" \
 -H "Content-Type: application/json" \
 -d '{ "sessionId": "myNewSession" }'</code></pre>
-                                        <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-create-session', this)">Copy</button>
+                                        <button class="btn btn-sm btn-outline-secondary mb-2"
+                                            onclick="copyCurl('curl-create-session', this)">Copy</button>
                                     </div>
                                     <div class="mb-3">
                                         <strong>List All Sessions</strong>
                                         <pre><code id="curl-list-sessions">curl -X GET "http://localhost:3000/api/v1/sessions"</code></pre>
-                                        <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-list-sessions', this)">Copy</button>
+                                        <button class="btn btn-sm btn-outline-secondary mb-2"
+                                            onclick="copyCurl('curl-list-sessions', this)">Copy</button>
                                     </div>
                                     <div class="mb-3">
                                         <strong>Delete Session</strong>
                                         <pre><code id="curl-delete-session">curl -X DELETE "http://localhost:3000/api/v1/sessions/mySession" \
 -H "Authorization: Bearer YOUR_SESSION_TOKEN"</code></pre>
-                                        <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-delete-session', this)">Copy</button>
+                                        <button class="btn btn-sm btn-outline-secondary mb-2"
+                                            onclick="copyCurl('curl-delete-session', this)">Copy</button>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="curl-text" role="tabpanel">
@@ -807,35 +922,40 @@
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Content-Type: application/json" \
 -d '{ "recipient_type": "individual", "to": "6281234567890", "type": "text", "text": { "body": "Hello from API!" } }'</code></pre>
-                                    <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-send-text', this)">Copy</button>
+                                    <button class="btn btn-sm btn-outline-secondary mb-2"
+                                        onclick="copyCurl('curl-send-text', this)">Copy</button>
                                 </div>
                                 <div class="tab-pane fade" id="curl-text-image" role="tabpanel">
                                     <pre><code id="curl-send-text-image">curl -X POST "http://localhost:3000/api/v1/messages?sessionId=YOUR_SESSION_ID" \
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Content-Type: application/json" \
 -d '{ "recipient_type": "individual", "to": "6281234567890", "type": "image", "image": { "link": "https://picsum.photos/200", "caption": "Test Image" } }'</code></pre>
-                                    <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-send-text-image', this)">Copy</button>
+                                    <button class="btn btn-sm btn-outline-secondary mb-2"
+                                        onclick="copyCurl('curl-send-text-image', this)">Copy</button>
                                 </div>
                                 <div class="tab-pane fade" id="curl-text-image-doc" role="tabpanel">
                                     <pre><code id="curl-send-text-image-doc">curl -X POST "http://localhost:3000/api/v1/messages?sessionId=YOUR_SESSION_ID" \
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Content-Type: application/json" \
 -d '[{ "recipient_type": "individual", "to": "6281234567890", "type": "text", "text": { "body": "Image and document inside!" } }, { "recipient_type": "individual", "to": "6281234567890", "type": "image", "image": { "link": "https://picsum.photos/200" } }]'</code></pre>
-                                    <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-send-text-image-doc', this)">Copy</button>
+                                    <button class="btn btn-sm btn-outline-secondary mb-2"
+                                        onclick="copyCurl('curl-send-text-image-doc', this)">Copy</button>
                                 </div>
                                 <div class="tab-pane fade" id="curl-text-doc" role="tabpanel">
                                     <pre><code id="curl-send-text-doc">curl -X POST "http://localhost:3000/api/v1/messages?sessionId=YOUR_SESSION_ID" \
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Content-Type: application/json" \
 -d '[{ "recipient_type": "individual", "to": "6281234567890", "type": "document", "document": { "link": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf", "filename": "doc.pdf" } }]'</code></pre>
-                                    <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-send-text-doc', this)">Copy</button>
+                                    <button class="btn btn-sm btn-outline-secondary mb-2"
+                                        onclick="copyCurl('curl-send-text-doc', this)">Copy</button>
                                 </div>
                                 <div class="tab-pane fade" id="curl-formatting" role="tabpanel">
                                     <pre><code id="curl-send-formatting">curl -X POST "http://localhost:3000/api/v1/messages?sessionId=YOUR_SESSION_ID" \
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Content-Type: application/json" \
 -d '{ "recipient_type": "individual", "to": "6281234567890", "type": "text", "text": { "body": "Hello!\n*Bold text*\nhttps://example.com" } }'</code></pre>
-                                    <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-send-formatting', this)">Copy</button>
+                                    <button class="btn btn-sm btn-outline-secondary mb-2"
+                                        onclick="copyCurl('curl-send-formatting', this)">Copy</button>
                                 </div>
                                 <div class="tab-pane fade" id="curl-webhook" role="tabpanel">
                                     <div class="mb-3">
@@ -844,13 +964,15 @@
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Content-Type: application/json" \
 -d '{ "sessionId": "YOUR_SESSION_ID", "url": "https://your-domain.com/webhook" }'</code></pre>
-                                        <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-set-webhook', this)">Copy</button>
+                                        <button class="btn btn-sm btn-outline-secondary mb-2"
+                                            onclick="copyCurl('curl-set-webhook', this)">Copy</button>
                                     </div>
                                     <div class="mb-3">
                                         <strong>Get Webhook</strong>
                                         <pre><code id="curl-get-webhook">curl -X GET "http://localhost:3000/api/v1/webhook?sessionId=YOUR_SESSION_ID" \
 -H "Authorization: Bearer YOUR_TOKEN"</code></pre>
-                                        <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-get-webhook', this)">Copy</button>
+                                        <button class="btn btn-sm btn-outline-secondary mb-2"
+                                            onclick="copyCurl('curl-get-webhook', this)">Copy</button>
                                     </div>
                                     <div class="mb-3">
                                         <strong>Delete Webhook</strong>
@@ -858,7 +980,8 @@
 -H "Authorization: Bearer YOUR_TOKEN" \
 -H "Content-Type: application/json" \
 -d '{ "sessionId": "YOUR_SESSION_ID" }'</code></pre>
-                                        <button class="btn btn-sm btn-outline-secondary mb-2" onclick="copyCurl('curl-delete-webhook', this)">Copy</button>
+                                        <button class="btn btn-sm btn-outline-secondary mb-2"
+                                            onclick="copyCurl('curl-delete-webhook', this)">Copy</button>
                                     </div>
                                 </div>
                             </div>
@@ -887,7 +1010,8 @@
                                 <option value="ERROR">Errors</option>
                             </select>
 
-                            <input type="text" id="log-search" class="terminal-search" placeholder="Search live stream logs...">
+                            <input type="text" id="log-search" class="terminal-search"
+                                placeholder="Search live stream logs...">
 
                             <div class="btn-group">
                                 <button id="pause-logs-btn" class="btn btn-sm btn-outline-light border-secondary">
@@ -910,19 +1034,25 @@
                 <section id="system-log-history" class="mb-5">
                     <div class="card shadow-sm">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0"><i class="bi bi-clock-history text-primary me-2"></i>System Log History</h5>
+                            <h5 class="mb-0"><i class="bi bi-clock-history text-primary me-2"></i>System Log History
+                            </h5>
                             <div>
-                                <button class="btn btn-sm btn-outline-primary ms-2" onclick="toggleBulkSelect()" id="bulkSelectBtn">
+                                <button class="btn btn-sm btn-outline-primary ms-2" onclick="toggleBulkSelect()"
+                                    id="bulkSelectBtn">
                                     <i class="bi bi-check-square"></i> Select Entries
                                 </button>
                                 <div id="bulkActions" class="d-inline-block d-none ms-2">
-                                    <button class="btn btn-sm btn-danger me-1" onclick="batchDeleteLogs()" id="batchDeleteBtn">
+                                    <button class="btn btn-sm btn-danger me-1" onclick="batchDeleteLogs()"
+                                        id="batchDeleteBtn">
                                         <i class="bi bi-trash"></i> Delete Selected
                                     </button>
-                                    <button class="btn btn-sm btn-secondary" onclick="toggleBulkSelect()" id="cancelBulkSelectBtn">Cancel</button>
+                                    <button class="btn btn-sm btn-secondary" onclick="toggleBulkSelect()"
+                                        id="cancelBulkSelectBtn">Cancel</button>
                                 </div>
-                                <button class="btn btn-sm btn-outline-secondary ms-2" onclick="exportLogs()"><i class="bi bi-download"></i> Export</button>
-                                <button class="btn btn-sm btn-outline-danger ms-2" onclick="clearAllLogs()"><i class="bi bi-trash"></i> Clear History</button>
+                                <button class="btn btn-sm btn-outline-secondary ms-2" onclick="exportLogs()"><i
+                                        class="bi bi-download"></i> Export</button>
+                                <button class="btn btn-sm btn-outline-danger ms-2" onclick="clearAllLogs()"><i
+                                        class="bi bi-trash"></i> Clear History</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -941,7 +1071,8 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content bg-transparent border-0">
                 <div class="modal-header border-0 pb-0">
-                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center pt-0">
                     <img id="lightboxImage" src="" class="img-fluid rounded shadow" style="max-height: 80vh;">
@@ -951,7 +1082,9 @@
     </div>
 
     <!-- Scripts section -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="/admin/js/qrcode.min.js"></script>
     <script>
         function sanitize(str) {
@@ -990,8 +1123,8 @@
 
         function updateThemeTogglerIcon(theme) {
             if (themeToggler) {
-                themeToggler.innerHTML = theme === 'dark' 
-                    ? '<i class="bi bi-sun-fill text-warning me-1"></i> Light' 
+                themeToggler.innerHTML = theme === 'dark'
+                    ? '<i class="bi bi-sun-fill text-warning me-1"></i> Light'
                     : '<i class="bi bi-moon-stars-fill text-primary me-1"></i> Dark';
             }
         }
@@ -1303,7 +1436,7 @@
                     body: JSON.stringify(payload)
                 });
                 const result = await response.json();
-                
+
                 const isSuccess = response.ok && (!Array.isArray(result) || result.every(r => r.status === 'success'));
 
                 apiResponseDiv.innerHTML = `
@@ -1580,7 +1713,7 @@
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(window.systemLogData, null, 2));
             const downloadAnchor = document.createElement('a');
             downloadAnchor.setAttribute("href", dataStr);
-            downloadAnchor.setAttribute("download", `system_logs_${new Date().toISOString().slice(0,10)}.json`);
+            downloadAnchor.setAttribute("download", `system_logs_${new Date().toISOString().slice(0, 10)}.json`);
             document.body.appendChild(downloadAnchor);
             downloadAnchor.click();
             downloadAnchor.remove();
@@ -1669,8 +1802,8 @@
                     if (response.status !== 'success' || !response.data) {
                         throw new Error('Failed to get WebSocket token');
                     }
-                    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-                    const ws = new WebSocket(`${protocol}//${window.location.host}`);
+                    const token = typeof response.data === 'string' ? response.data : (response.data.token || '');
+                    const ws = new WebSocket(`${protocol}//${window.location.host}?token=${encodeURIComponent(token)}`);
 
                     ws.onopen = () => {
                         appendLogEntry({
